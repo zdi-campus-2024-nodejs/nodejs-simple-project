@@ -1,0 +1,83 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+.header {
+    background-color: #F5F4DB;
+}
+
+.nav {
+    background-color: #F5F4DB;
+}
+
+.side-menu-article {
+    z-index: 1; /* Stay on top */
+    background-color: #F7F59D;
+    display: flex;
+    float: left;
+    clear: left;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.side-menu-section {
+    width: 100%
+
+}
+
+.side-menu-section .closebtn {
+    position: relative;
+    float: right;
+    clear: right;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.side-menu-section a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.side-menu-section a:hover {
+    color: #f1f1f1;
+}
+
+.side-menu-section:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.outlet-side {
+
+}
+
+.outlet-side-content {
+    background-color: #D6D5D3;
+    height: 100%
+}
+
+@media screen and (max-height: 450px) {
+    .side-menu-article {
+        padding-top: 15px;
+    }
+
+    .side-menu-article a {
+        font-size: 18px;
+    }
+
+    .side-menu-section .closebtn {
+        font-size: 18px;
+    }
+}

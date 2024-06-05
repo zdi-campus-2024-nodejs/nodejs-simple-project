@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-simple-project",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf apps/frontend/app/dist",
+    "precompile": "npm run clean",
+    "compile": "tsc",
+    "start-be": "npx tsx apps/backend/src/index.ts",
+    "prestart-fe": "npm run compile && cp -rf dist/frontend/app apps/frontend/app/dist",
+    "start-fe": "open apps/frontend/app/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@jest/types": "29.6.3",
+    "jest": "^29.7.0",
+    "open": "^10.1.0",
+    "tsx": "^4.11.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "tslog": "^4.9.2"
+  }
+}

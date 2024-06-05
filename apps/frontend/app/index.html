@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="dsfm-kpi">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.ico"/>
+</head>
+<body class="main-body">
+<header class="header">
+    <div class="header-left-side"></div>
+    <div class="header-right-side"></div>
+</header>
+<nav class="nav">
+    <div class="nav-left-side">
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Application</span>
+	</div>
+	<div class="nav-right-side"></div>
+</nav>
+<article id="sideMenu" class="side-menu-article">
+    <section class="side-menu-section">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></br>
+        <a href="javascript:void(0)" onclick="processStatus()">About</a></br>
+        <a href="#">Services</a></br>
+        <a href="#">Clients</a></br>
+        <a href="#">Contact</a></br>
+    </section>
+</article>
+<aside class="outlet-side">
+    <div id="outletSideContent" class="outlet-side-content">
+        aside
+    </div>
+</aside>
+<footer></footer>
+
+<script>
+    let exports = {};
+</script>
+<script src="dist/services/status.service.js"></script>
+<script>
+function openNav() {
+  document.getElementById("sideMenu").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("sideMenu").style.width = "0";
+}
+
+function processStatus() {
+    let status = getStatus();
+    document.getElementById("outletSideContent").textContent = `Response from server: ${status}`;
+}
+
+closeNav();
+</script>
+
+</body>
+</html>
